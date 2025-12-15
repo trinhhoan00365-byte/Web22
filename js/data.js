@@ -7,7 +7,7 @@ const MOVIES = [
     servers: [
       {
         name: "Server 1",
-        url: "https://streamtape.com/v/qZ3VW9VoVRuze4k/tweeload_2b903c1d.mp4"
+        url: "https://mega.nz/file/3tQWgKZJ#ZV-1KpYkrEPuSC2C59lEFRQzgtcCIyEpHAn5eJcja5E"
       },
       {
         name: "Server 2",
