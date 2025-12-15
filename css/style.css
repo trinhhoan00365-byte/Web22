@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  background: #0b0b12;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+.header {
+  padding: 20px;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg,#ffb86c,#7aa2ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  text-decoration: none;
+  color: white;
+}
+
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.duration {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: rgba(0,0,0,.7);
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 4px;
+  padding: 8px 12px;
+  background: #1e1e2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #7aa2ff;
+  color: #000;
+  font-weight: 700;
+}
+
+.back {
+  display: block;
+  padding: 15px;
+  color: #7aa2ff;
+  text-decoration: none;
+}
+
+.player video {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+.servers {
+  text-align: center;
+  margin: 20px;
+}
+
+.servers button {
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.servers .active {
+  background: #7aa2ff;
+  color: #000;
+}
