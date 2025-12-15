@@ -7,7 +7,7 @@ const MOVIES = [
     servers: [
       {
         name: "Server 1",
-        url: "https://www.w3schools.com/html/mov_bbb.mp4"
+        url: "https://streamtape.com/v/yV76bMlLmXUB2R/lv_0_20251214230529.mp4"
       },
       {
         name: "Server 2",
