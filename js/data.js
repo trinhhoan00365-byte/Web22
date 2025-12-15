@@ -1,8 +1,3 @@
-// js/data.js
-// ===============================
-// DATABASE PHIM (CHẠY GITHUB PAGES)
-// ===============================
-
 const MOVIES = [
   {
     id: 1,
@@ -12,15 +7,14 @@ const MOVIES = [
     servers: [
       {
         name: "Server 1",
-        url: " https://streamtape.com/v/1bVbrR63a1Hd3Y/lv_0_20251214230455.mp4"
+        url: "https://www.w3schools.com/html/mov_bbb.mp4"
       },
       {
         name: "Server 2",
-        url: " https://streamtape.com/v/1bVbrR63a1Hd3Y/lv_0_20251214230455.mp4"
+        url: "https://www.w3schools.com/html/movie.mp4"
       }
     ]
   },
-
   {
     id: 2,
     title: "Phim Demo 2",
@@ -32,9 +26,8 @@ const MOVIES = [
         url: "https://www.w3schools.com/html/movie.mp4"
       }
     ]
-  },
-
-  {
+  }
+];  {
     id: 3,
     title: "Phim Demo 3",
     duration: "06:10",
