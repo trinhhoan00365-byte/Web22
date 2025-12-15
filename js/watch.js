@@ -2,24 +2,34 @@ const params = new URLSearchParams(location.search);
 const id = Number(params.get("id"));
 
 const movie = MOVIES.find(m => m.id === id);
-const video = document.getElementById("video");
-const serversDiv = document.getElementById("servers");
 
 if (!movie) {
   alert("Không tìm thấy phim");
   location.href = "index.html";
 }
 
-// load server đầu tiên
-function loadServer(url) {
-  video.pause();
+const video = document.getElementById("video");
+const cover = document.getElementById("video-cover");
+const coverImg = document.getElementById("cover-img");
+const serversDiv = document.getElementById("servers");
+
+// gán thumbnail
+coverImg.src = movie.thumb;
+
+// play video
+function playVideo(url) {
   video.src = url;
-  video.load();
+  cover.style.display = "none";
+  video.style.display = "block";
   video.play();
 }
 
-loadServer(movie.servers[0].url);
+// click thumbnail để phát
+cover.onclick = () => {
+  playVideo(movie.servers[0].url);
+};
 
+// server buttons
 movie.servers.forEach((s, index) => {
   const btn = document.createElement("button");
   btn.innerText = s.name;
@@ -31,7 +41,7 @@ movie.servers.forEach((s, index) => {
       .forEach(b => b.classList.remove("active"));
 
     btn.classList.add("active");
-    loadServer(s.url);
+    playVideo(s.url);
   };
 
   serversDiv.appendChild(btn);
