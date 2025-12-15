@@ -12,7 +12,7 @@ function renderMovies() {
     grid.innerHTML += `
       <a class="card" href="watch.html?id=${m.id}">
         <div class="thumb">
-          <img src="${m.thumb}" alt="${m.title}">
+          <img src="${m.thumb}">
           <span class="duration">${m.duration}</span>
         </div>
         <div class="title">${m.title}</div>
@@ -24,11 +24,11 @@ function renderMovies() {
 }
 
 function renderPagination() {
-  const totalPage = Math.ceil(MOVIES.length / perPage);
+  const total = Math.ceil(MOVIES.length / perPage);
   const pag = document.getElementById("pagination");
   pag.innerHTML = "";
 
-  for (let i = 1; i <= totalPage; i++) {
+  for (let i = 1; i <= total; i++) {
     pag.innerHTML += `
       <button class="${i === currentPage ? 'active' : ''}"
         onclick="currentPage=${i};renderMovies()">
