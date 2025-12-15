@@ -1,4 +1,4 @@
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(location.search);
 const id = Number(params.get("id"));
 
 const movie = MOVIES.find(m => m.id === id);
@@ -6,11 +6,19 @@ const video = document.getElementById("video");
 const serversDiv = document.getElementById("servers");
 
 if (!movie) {
-  alert("Phim không tồn tại");
+  alert("Không tìm thấy phim");
   location.href = "index.html";
 }
 
-video.src = movie.servers[0].url;
+// load server đầu tiên
+function loadServer(url) {
+  video.pause();
+  video.src = url;
+  video.load();
+  video.play();
+}
+
+loadServer(movie.servers[0].url);
 
 movie.servers.forEach((s, index) => {
   const btn = document.createElement("button");
@@ -18,12 +26,12 @@ movie.servers.forEach((s, index) => {
   if (index === 0) btn.classList.add("active");
 
   btn.onclick = () => {
-    document.querySelectorAll(".servers button")
+    document
+      .querySelectorAll(".servers button")
       .forEach(b => b.classList.remove("active"));
 
     btn.classList.add("active");
-    video.src = s.url;
-    video.play();
+    loadServer(s.url);
   };
 
   serversDiv.appendChild(btn);
