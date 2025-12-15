@@ -9,11 +9,11 @@ for (let i = 1; i <= 20; i++) {
     servers: [
       {
         name: "Server 1",
-        url: "https://www.w3schools.com/html/mov_bbb.mp4"
+        url: "https://streamtape.com/v/1bVbrR63a1Hd3Y/lv_0_20251214230455.mp4"
       },
       {
         name: "Server 2",
-        url: "https://www.w3schools.com/html/movie.mp4"
+        url: "https://streamtape.com/v/1bVbrR63a1Hd3Y/lv_0_20251214230455.mp4"
       }
     ]
   });
